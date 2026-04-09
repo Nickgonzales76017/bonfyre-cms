@@ -1,0 +1,20 @@
+# Build outputs
+*.o
+*.a
+*.so
+*.dylib
+/cmd/bonfyre-cms/bonfyre-cms
+/cmd/bonfyre-cms/tests/compact-probe
+/vendor/bonfyre-core/lib/libbonfyre/obj/
+/vendor/bonfyre-core/lib/libbonfyre/test_bonfyre
+/vendor/bonfyre-core/lib/libbonfyre/libbonfyre.a
+/vendor/bonfyre-core/lib/libbonfyre/libbonfyre.so
+/vendor/liblambda-tensors/liblambda-tensors.a
+/vendor/liblambda-tensors/liblambda-tensors.so
+/vendor/liblambda-tensors/src/lt_core.o
+/vendor/liblambda-tensors/test_lambda_tensors
+
+# Temp/output
+tmp/
+dist/
+build/
