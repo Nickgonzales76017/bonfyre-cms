@@ -1,0 +1,7 @@
+[submodule "vendor/bonfyre-core"]
+	path = vendor/bonfyre-core
+	url = https://github.com/Nickgonzales76017/bonfyre-core.git
+
+[submodule "vendor/liblambda-tensors"]
+	path = vendor/liblambda-tensors
+	url = https://github.com/Nickgonzales76017/liblambda-tensors.git

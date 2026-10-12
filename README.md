@@ -6,6 +6,26 @@
 
 Developer tools, small content systems and application integrations that require content records without a remote SaaS dependency.
 
+## Reproducible source dependencies
+
+The two formerly vendored libraries are now **pinned public submodules**, not
+copied source trees. Their original library tree identities were compared
+against these remotes before conversion.
+
+```sh
+git clone https://github.com/Nickgonzales76017/bonfyre-cms.git
+cd bonfyre-cms
+git submodule update --init -- vendor/bonfyre-core vendor/liblambda-tensors
+make -C vendor/bonfyre-core/lib/libbonfyre
+make -C cmd/bonfyre-cms
+```
+
+The existing C include and link paths are unchanged. Updating a shared
+library pin is a separate reviewed commit; `git pull` does not silently
+select the latest dependency revision. The source licenses in both submodules
+remain in force. This earlier CMS extraction remains distinct from newer
+native CMS development.
+
 ## Source and scope
 
 This repository preserves an **April 2026 source extraction**. It contains `cmd/bonfyre-cms/`, a vendored dependency slice, and extraction notes. That material remains useful for inspection and for understanding a component boundary, but it is not the latest canonical source or an independently supported package release.
