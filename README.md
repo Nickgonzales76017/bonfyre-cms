@@ -1,39 +1,25 @@
-# bonfyre-cms
+<p align="center"><img src="https://github.com/user-attachments/assets/7785a8d6-6e28-4892-8958-3daf85414f05" width="80" alt="Bonfÿre knight" /></p>
 
-Lightweight CMS entry repo for Bonfyre.
+# Bonfÿre CMS
 
-This repo is a public entry vector for the CMS surface:
+**Small local content, API and record-management components.**
 
-- dynamic content schemas
-- REST API and embedded HTTP server
-- token auth
-- relation and namespace management
-- compact bindings backed by `liblambda-tensors`
+Developer tools, small content systems and application integrations that require content records without a remote SaaS dependency.
 
-## Why This Exists
+## Source and scope
 
-The live `BonfyreCMS` runtime currently lives in:
+This repository preserves an **April 2026 source extraction**. It contains `cmd/bonfyre-cms/`, a vendored dependency slice, and extraction notes. That material remains useful for inspection and for understanding a component boundary, but it is not the latest canonical source or an independently supported package release.
 
-- `/Users/nickgonzales/Projects/bonfyre-oss/cmd/BonfyreCMS`
+The [current Bonfÿre development lineage](https://github.com/Nickgonzales76017/bonfyre) owns the integrated version: [`cmd/BonfyreCMS/`](https://github.com/Nickgonzales76017/bonfyre/tree/main/cmd/BonfyreCMS/). Later source changes are reviewed and published separately from private runtime state.
 
-This repo gives that surface its own clear entry point so the Bonfyre page can link to it directly.
+The older extraction kept temporary vendored dependencies and original migration notes. They are not an additional source of truth; check the [current repository](https://github.com/Nickgonzales76017/bonfyre) for the version, license, operating contract and tests relevant to your use.
 
-## Current Layout
+## See the work in context
 
-- `cmd/bonfyre-cms/`
-  - extracted CMS binary source
-- `vendor/bonfyre-core/lib/libbonfyre/`
-  - temporary local core dependency slice
-- `vendor/liblambda-tensors/`
-  - temporary local compression/library dependency slice
-- `docs/`
-  - extraction notes
+- [Aurekai work samples](https://aurekai-work-samples.pages.dev/) — customer-facing tools and handoffs
+- [Bonfÿre developer and product guides](https://docs.aurekai.work/) — integrated operations and technical contexts
+- [Client integration examples](https://github.com/Nickgonzales76017/bonfyre/blob/main/docs/client-operations-portfolio.md) — real kinds of receiving-system work
 
-## Dependency Note
+For an **independently scoped native-C example** with its own build and verification fixtures, see [Bonfÿre Statement Import](https://github.com/Nickgonzales76017/bonfyre-statement-import).
 
-This repo currently vendors the minimum local dependencies needed to validate the extraction:
-
-- `lib/libbonfyre`
-- `liblambda-tensors`
-
-That is a migration convenience, not the long-term dependency model.
+The license accompanying this extraction governs its own files; the canonical repo and independent components may have different terms.
